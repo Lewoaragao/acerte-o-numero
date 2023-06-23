@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Guess the Number</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="terminal">
+      <p class="output title">Bem-vindo ao <em>Guess the Number</em>!</p>
+      <p class="output">Tente adivinhar o número entre 1 e 100.</p>
+      <p class="output">
+        Tentativas restantes: <span id="remainingAttempts">5</span>
+      </p>
+      <p class="output">
+        Números tentados: <span id="attemptedNumbers"></span>
+      </p>
+      <input type="text" id="guessInput" placeholder="Insira seu palpite" />
+      <button id="guessButton">Enviar</button>
+      <p class="output">Boa sorte!</p>
+      <p id="message" class="output message-output"></p>
+
+      <button id="configButton">Configurações</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="configModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Configurações</h2>
+        <label for="languageSelect">Idioma:</label>
+        <select id="languageSelect">
+          <option value="pt-br">Português (Brasil)</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+        <label for="themeSelect">Tema:</label>
+        <select id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <button id="saveConfigButton">Salvar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
